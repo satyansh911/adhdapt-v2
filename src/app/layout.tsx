@@ -2,8 +2,8 @@ import "./globals.css";
 import { ReactNode } from "react";
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
+  // SignInButton,
+  // SignUpButton,
   SignedIn,
   SignedOut,
   UserButton,
@@ -27,10 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <body className={`${inter.className} antialiased`}>
           {/* Auth header */}
           <header className="flex justify-end items-center p-4 gap-4 h-16 border-b">
-            <SignedOut>
-              <SignInButton />
-              <SignUpButton />
-            </SignedOut>
+            <SignedOut></SignedOut>
             <SignedIn>
               <UserButton />
             </SignedIn>
