@@ -82,7 +82,7 @@ export default function SignInPage() {
                 headerTitle: "hidden",
                 headerSubtitle: "hidden",
                 socialButtonsBlockButton:
-                  "bg-black text-white font-medium rounded-full px-4 py-2 hover:bg-gray-800 transition w-full",
+                  "bg-white text-white font-medium rounded-full px-4 py-2 hover:bg-gray-800 transition w-full",
 
                 socialButtonsBlock: "mb-4",
                 dividerRow: "my-4 border-gray-700",
