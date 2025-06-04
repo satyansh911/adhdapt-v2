@@ -1,11 +1,19 @@
+import styles from './index.module.css';
+
 export default function HomePage() {
   return (
     <section className="flex flex-col items-center justify-center min-h-screen text-center px-4">
-      <h1 className="text-5xl font-bold mb-6">Welcome to ADHDapt</h1>
-      <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl">
-        A focused, user-friendly webapp designed to help individuals with ADHD manage their time,
-        mood, and daily life using gamification, scheduling, journaling, and more.
-      </p>
+      <b className={styles.adhdaptTrackUnderstandThrContainer}>
+        <p className={styles.adhdapt}>ADHDapt</p>
+        <p className={styles.trackUnderstandThrive}>Track. Understand. Thrive.</p>
+      </b>
+      <div className={styles.adhdaptIsYour}>ADHDapt is your personal space to manage moods, tasks, reflections, and motivation — built for the way your brain works. Whether you're just starting out or trying to stay consistent, we’re here to guide you.</div>
+      <a href="/sign-up">
+        <button className="relative right-[540px] -top-[110px] px-6 py-2 bg-black text-white rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+          Start Your Journey
+        </button>
+      </a>
     </section>
+    
   );
 }
