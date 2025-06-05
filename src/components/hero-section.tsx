@@ -5,6 +5,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 export default function ADHDaptHeroSection() {
+    const router = useRouter();
   return (
     <div className="flex min-h-screen flex-col bg-white px-4 dark:bg-black">
       <Navbar />
@@ -54,7 +55,7 @@ export default function ADHDaptHeroSection() {
             transition={{ duration: 0.4, delay: 0.8 }}
             className="mt-6 flex flex-wrap justify-center gap-4"
           >
-            <button className="w-60 transform rounded-lg bg-[#ffd12d] px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white dark:bg-emerald-500 dark:hover:bg-emerald-600">
+            <button onClick={() => router.push("/sign-up")} className="w-60 transform rounded-lg bg-[#ffd12d] px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white dark:bg-emerald-500 dark:hover:bg-emerald-600">
               Start Your Journey
             </button>
             <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
