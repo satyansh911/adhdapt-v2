@@ -1,14 +1,16 @@
 .adhdapt {
   	margin: 0;
+    width:70%;
 }
 .trackUnderstandThrive {
   	margin: 0;
   	font-size: 36px;
+    width:70%;
 }
 .adhdaptTrackUnderstandThrContainer {
-  	width: 100%;
+  	width: 70%;
   	position: relative;
-    left:7%;
+    right:8%;
     top:-160px;
   	letter-spacing: -0.02em;
   	display: inline-block;
