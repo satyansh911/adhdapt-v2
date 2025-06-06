@@ -89,7 +89,9 @@ export default function AboutUsPage() {
             className="italic text-2xl font-semibold text-black dark:text-white text-center mb-6"
           >
             “This platform isn’t just a tool — it’s a support system.”
-            <div className="text-[#ffd12d]/70 text-base mt-2">– Satyansh & Kushagra, Co-founders</div>
+            <div className="text-[#ffd12d]/70 text-base mt-2">
+              – Satyansh & Kushagra, Co-founders
+            </div>
           </motion.blockquote>
 
           {/* Team Section */}
@@ -118,7 +120,12 @@ export default function AboutUsPage() {
                 THE TEAM.
               </h2>
               <p className="text-md text-black dark:text-neutral-300 mb-6">
-                ADHDapt was conceptualized and brought to life by Satyansh Singh (B.Tech, IIIT Sonepat) and Kushagra Saxena (B.Tech, IIIT Ranchi), both with strong academic backgrounds and a shared interest in mental wellness and user-centric technology. Their combined expertise in development and human behavior shaped the foundation of the platform. With deep empathy for users and continuous feedback, they aim to evolve ADHDapt into a long-term mental productivity companion.
+                Our team consists of two driven developers who are also users of
+                the platform. We understand the chaos of unmanaged tasks,
+                scattered thoughts, and endless mental to-dos—because we’ve
+                lived it. Backed by research and user feedback, we’ve translated
+                our vision into a product that not only tracks productivity, but
+                nurtures well-being.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -128,8 +135,12 @@ export default function AboutUsPage() {
                   { count: "10+", label: "Active beta testers" },
                 ].map((item, i) => (
                   <div key={i}>
-                    <div className="text-3xl font-bold text-[#ffd12d]">{item.count}</div>
-                    <div className="text-sm text-black dark:text-neutral-400">{item.label}</div>
+                    <div className="text-3xl font-bold text-[#ffd12d]">
+                      {item.count}
+                    </div>
+                    <div className="text-sm text-black dark:text-neutral-400">
+                      {item.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -138,12 +149,20 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <footer className="w-full max-w-6xl flex flex-col md:flex-row justify-between items-center border-t border-black dark:border-neutral-800 pt-6 pb-8 mt-8 text-black dark:text-white text-sm gap-2 px-4">
-        <div>&copy; {new Date().getFullYear()} ADHDapt. All rights reserved.</div>
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-8 text-neutral-500 text-sm px-4 gap-10">
+        <div>
+          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
+        </div>
         <div className="flex gap-6">
-          <a href="#" className="hover:underline">instagram.</a>
-          <a href="#" className="hover:underline">facebook.</a>
-          <a href="#" className="hover:underline">twitter.</a>
+          <a href="#" className="hover:underline">
+            instagram.
+          </a>
+          <a href="#" className="hover:underline">
+            facebook.
+          </a>
+          <a href="#" className="hover:underline">
+            twitter.
+          </a>
         </div>
       </footer>
     </div>
@@ -185,3 +204,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
+
