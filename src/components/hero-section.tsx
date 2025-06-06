@@ -13,13 +13,13 @@ export default function ADHDaptHeroSection() {
       {/* Decorative lines */}
       <div className="relative flex flex-1 flex-col items-center justify-center">
         <div className="absolute inset-y-0 left-0 w-px bg-neutral-200/80 dark:bg-neutral-800/80">
-          <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-emerald-500 to-transparent" />
+          <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-[#ffd12d] to-transparent" />
         </div>
         <div className="absolute inset-y-0 right-0 w-px bg-neutral-200/80 dark:bg-neutral-800/80">
-          <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-emerald-500 to-transparent" />
+          <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-[#ffd12d] to-transparent" />
         </div>
         <div className="absolute bottom-0 inset-x-0 h-px bg-neutral-200/80 dark:bg-neutral-800/80">
-          <div className="mx-auto h-px w-40 bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
+          <div className="mx-auto h-px w-40 bg-gradient-to-r from-transparent via-[#ffd12d] to-transparent" />
         </div>
 
         {/* Main Content */}
@@ -30,19 +30,22 @@ export default function ADHDaptHeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-200">
-              <span className="block">ADHDapt</span>
+            <img src="/animation.gif" className="relative -top-20 w-90 h-auto"/>
+            <h1 className="relative -top-50 text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-200">
+              <span className="block ">ADHDapt</span>
               <span className="block text-lg md:text-2xl mt-2 text-slate-700 dark:text-slate-400 font-semibold">
                 Track. Understand. Thrive.
               </span>
+              <img src="/new-unscreen.gif" className="relative -top-40 left-230 w-90 h-auto"/>
             </h1>
+            
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.5 }}
-            className="mx-auto max-w-2xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
+            className="relative -top-100 mx-auto max-w-2xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
           >
             ADHDapt is your personal space to manage moods, tasks, reflections, and motivation — built
             for the way your brain works. Whether you're just starting out or trying to stay consistent,
@@ -53,7 +56,7 @@ export default function ADHDaptHeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.8 }}
-            className="mt-6 flex flex-wrap justify-center gap-4"
+            className="relative -top-100 mt-6 flex flex-wrap justify-center gap-4"
           >
             <button onClick={() => router.push("/sign-up")} className="w-60 transform rounded-lg bg-[#ffd12d] px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white dark:bg-emerald-500 dark:hover:bg-emerald-600">
               Start Your Journey
@@ -67,7 +70,7 @@ export default function ADHDaptHeroSection() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.2 }}
-            className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+            className="relative -top-100 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
           >
             <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
               <img
