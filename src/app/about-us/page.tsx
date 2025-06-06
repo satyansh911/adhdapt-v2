@@ -38,7 +38,12 @@ export default function AboutUsPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-black dark:text-neutral-300 mb-6 max-w-3xl mx-auto text-center"
           >
-            We’re Satyansh Singh (B.Tech, IIIT Sonepat) and Kushagra Saxena (B.Tech, IIIT Ranchi), two students passionate about mental health and meaningful tech. ADHDapt was born from a simple yet powerful idea: we believe everyone experiences some symptoms of ADHD—distraction, procrastination, burnout—especially in today’s digital world.
+            We’re Satyansh Singh (B.Tech, IIIT Sonepat) and Kushagra Saxena
+            (B.Tech, IIIT Ranchi), two students passionate about mental health
+            and meaningful tech. ADHDapt was born from a simple yet powerful
+            idea: we believe everyone experiences some symptoms of
+            ADHD—distraction, procrastination, burnout—especially in today’s
+            digital world.
           </motion.p>
 
           <motion.p
@@ -47,7 +52,12 @@ export default function AboutUsPage() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-md text-black dark:text-neutral-400 mb-10 max-w-3xl mx-auto text-center"
           >
-            ADHDapt is our way of turning empathy into impact. We’ve combined structured scheduling, gamified task management, mood tracking, journaling, and peer interaction to build a toolkit for anyone struggling with focus, time blindness, or emotional overwhelm. Whether diagnosed or not, ADHDapt is here to help people take control of their day, mindfully and meaningfully.
+            ADHDapt is our way of turning empathy into impact. We’ve combined
+            structured scheduling, gamified task management, mood tracking,
+            journaling, and peer interaction to build a toolkit for anyone
+            struggling with focus, time blindness, or emotional overwhelm.
+            Whether diagnosed or not, ADHDapt is here to help people take
+            control of their day, mindfully and meaningfully.
           </motion.p>
 
           <motion.div
@@ -56,9 +66,13 @@ export default function AboutUsPage() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="bg-[#ffd12d]/20 dark:bg-[#ffd12d]/10 px-6 py-4 rounded-xl text-center mb-10 max-w-3xl mx-auto"
           >
-            <h3 className="text-xl font-semibold text-[#ffd12d] mb-2">Our Mission</h3>
+            <h3 className="text-xl font-semibold text-[#ffd12d] mb-2">
+              Our Mission
+            </h3>
             <p className="text-md text-black dark:text-neutral-300">
-              To reimagine how ADHD is managed—not as a flaw, but as a unique way of thinking. Through digital wellness tools, we aim to reduce stigma, support structure, and empower self-growth.
+              To reimagine how ADHD is managed—not as a flaw, but as a unique
+              way of thinking. Through digital wellness tools, we aim to reduce
+              stigma, support structure, and empower self-growth.
             </p>
           </motion.div>
 
@@ -82,7 +96,9 @@ export default function AboutUsPage() {
             className="italic text-2xl font-semibold text-black dark:text-white text-center mb-6"
           >
             “This platform isn’t just a tool — it’s a support system.”
-            <div className="text-[#ffd12d]/70 text-base mt-2">– Satyansh & Kushagra, Co-founders</div>
+            <div className="text-[#ffd12d]/70 text-base mt-2">
+              – Satyansh & Kushagra, Co-founders
+            </div>
           </motion.blockquote>
 
           <section className="grid md:grid-cols-2 gap-10 mt-20">
@@ -101,13 +117,27 @@ export default function AboutUsPage() {
                 THE TEAM.
               </h2>
               <p className="text-md text-black dark:text-neutral-300 mb-6">
-                Our team consists of two driven developers who are also users of the platform. We understand the chaos of unmanaged tasks, scattered thoughts, and endless mental to-dos—because we’ve lived it. Backed by research and user feedback, we’ve translated our vision into a product that not only tracks productivity, but nurtures well-being.
+                Our team consists of two driven developers who are also users of
+                the platform. We understand the chaos of unmanaged tasks,
+                scattered thoughts, and endless mental to-dos—because we’ve
+                lived it. Backed by research and user feedback, we’ve translated
+                our vision into a product that not only tracks productivity, but
+                nurtures well-being.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {[{ count: "100+", label: "Users onboarded" }, { count: "40+", label: "Daily tasks managed" }, { count: "25+", label: "Journal entries daily" }, { count: "10+", label: "Active beta testers" }].map((item, i) => (
+                {[
+                  { count: "100+", label: "Users onboarded" },
+                  { count: "40+", label: "Daily tasks managed" },
+                  { count: "25+", label: "Journal entries daily" },
+                  { count: "10+", label: "Active beta testers" },
+                ].map((item, i) => (
                   <div key={i}>
-                    <div className="text-3xl font-bold text-[#ffd12d]">{item.count}</div>
-                    <div className="text-sm text-black dark:text-neutral-400">{item.label}</div>
+                    <div className="text-3xl font-bold text-[#ffd12d]">
+                      {item.count}
+                    </div>
+                    <div className="text-sm text-black dark:text-neutral-400">
+                      {item.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -116,12 +146,20 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <footer className="w-full max-w-6xl flex flex-col md:flex-row justify-between items-center border-t border-black dark:border-neutral-800 pt-6 pb-8 mt-8 text-black dark:text-white text-sm gap-2 px-4">
-        <div>&copy; {new Date().getFullYear()} ADHDapt. All rights reserved.</div>
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-8 text-neutral-500 text-sm px-4 gap-10">
+        <div>
+          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
+        </div>
         <div className="flex gap-6">
-          <a href="#" className="hover:underline">instagram.</a>
-          <a href="#" className="hover:underline">facebook.</a>
-          <a href="#" className="hover:underline">twitter.</a>
+          <a href="#" className="hover:underline">
+            instagram.
+          </a>
+          <a href="#" className="hover:underline">
+            facebook.
+          </a>
+          <a href="#" className="hover:underline">
+            twitter.
+          </a>
         </div>
       </footer>
     </div>
@@ -163,3 +201,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
+

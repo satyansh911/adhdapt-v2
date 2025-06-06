@@ -1,105 +1,91 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { SignIn } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
-const slides = [
-  {
-    img: "https://img.freepik.com/free-vector/hand-drawn-brain-cartoon-illustration_52683-126692.jpg?semt=ais_hybrid&w=740",
-    title: "Boost Focus Naturally",
-    desc: "Transform attention challenges into strengths with ADHDapt.",
-  },
-  {
-    img: "https://img.freepik.com/free-vector/brain-idea-concept-illustration_114360-7416.jpg?semt=ais_hybrid&w=740",
-    title: "Personalized Learning",
-    desc: "Tailored strategies designed to align with your cognitive strengths.",
-  },
-  {
-    img: "https://img.freepik.com/free-vector/brain-cute-cartoon-character_1308-133251.jpg?semt=ais_hybrid&w=740",
-    title: "Gamified Experience",
-    desc: "Fun, reward-based modules to keep you motivated and on track.",
-  },
-];
-
-export default function SignInPage() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+const Navbar = () => {
+  const router = useRouter();
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-br from-black via-[#111] to-[#1a1a1a] text-white">
-      {/* Carousel Section */}
-      <div className="hidden md:flex flex-col justify-center items-center w-1/2 px-10">
-        <div className="text-center max-w-md">
-          <div className="p-6 bg-white/5 rounded-xl shadow-md backdrop-blur-md border border-white/10 mb-6">
-            <img
-              src={slides[current].img}
-              alt="Slide image"
-              className="w-64 h-64 object-cover rounded-lg mx-auto"
-            />
-          </div>
-          <h2 className="text-3xl font-bold mb-2">{slides[current].title}</h2>
-          <p className="text-lg text-gray-300">{slides[current].desc}</p>
-          <div className="flex gap-2 mt-4 justify-center">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrent(idx)}
-                className={`w-3 h-3 rounded-full ${
-                  idx === current ? "bg-white" : "bg-gray-500"
-                } transition-all`}
-              />
-            ))}
-          </div>
-        </div>
+    <nav className="flex w-full items-center justify-between border-b border-neutral-200 px-4 py-4 bg-white shadow-sm">
+      <div
+        className="flex items-center gap-2 cursor-pointer"
+        onClick={() => router.push("/")}
+      >
+        <img src="/logo.png" className="size-10 rounded-full" alt="Logo" />
+        <h1 className="text-lg font-bold md:text-2xl text-black">ADHDapt</h1>
       </div>
+      <div className="flex items-center gap-3">
+        {[
+          { label: "Home", href: "/" },
+          { label: "About Us", href: "/about-us" },
+          { label: "Sign Up", href: "/sign-up" },
+          { label: "Contact", href: "/contact" },
+        ].map((btn, i) => (
+          <button
+            key={i}
+            onClick={() => router.push(btn.href)}
+            className="w-24 md:w-32 transform rounded-lg bg-[#ffd12d] px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white"
+          >
+            {btn.label}
+          </button>
+        ))}
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </div>
+    </nav>
+  );
+};
 
-      {/* Sign-In Section */}
-      <div className="flex flex-1 justify-center items-center px-6">
-        <div className="w-full max-w-md bg-black/30 backdrop-blur-lg border border-white/10 rounded-2xl p-8 shadow-xl">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-white mb-2">ADHDapt</h1>
-            <p className="text-md text-gray-400">Track, Understand, Thrive</p>
+export default function SignInPage() {
+  return (
+    <div className="min-h-screen bg-white flex flex-col">
+      <Navbar />
+
+      {/* Background Pattern */}
+      <div className="flex-1 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#fff6cc] via-[#fffde6] to-[#fff] flex justify-center items-center px-4 py-10">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-yellow-100 p-8">
+          <div className="text-center mb-6">
+            <h1 className="text-4xl font-extrabold text-gray-800">Sign In</h1>
+            <p className="text-sm text-gray-500">
+              Access your personalized ADHDapt experience
+            </p>
           </div>
 
           <SignIn
             appearance={{
               variables: {
-                colorPrimary: "#ffffff",
-                colorBackground: "#232023",
-                colorText: "#ffffff",
-                colorTextSecondary: "#ffffff",
-                colorInputText: "#f4f4f5",
-                colorInputBackground: "#000000",
+                colorPrimary: "#ffd12d",
+                colorBackground: "#ffffff",
+                colorText: "#111827",
+                colorTextSecondary: "#6b7280",
+                colorInputText: "#1f2937",
+                colorInputBackground: "#ffffff",
               },
               elements: {
                 card: "bg-transparent border-none shadow-none p-0",
                 headerTitle: "hidden",
                 headerSubtitle: "hidden",
                 socialButtonsBlockButton:
-                  "bg-white text-white font-medium rounded-full px-4 py-2 hover:bg-gray-800 transition w-full",
-
-                socialButtonsBlock: "mb-4",
-                dividerRow: "my-4 border-gray-700",
-                formFieldLabel: "text-gray-400 text-sm mb-1",
+                  "bg-[#ffd12d] text-black font-medium rounded-full px-4 py-2 hover:bg-[#49411c] hover:text-white transition w-full",
+                socialButtonsBlock: "mb-3",
+                dividerRow: "my-4 border-gray-300",
+                formFieldLabel: "text-gray-600 text-sm mb-1",
                 formFieldInput:
-                  "bg-[#1f1f1f] text-white placeholder-gray-400 border border-gray-600 rounded-md px-3 py-2 focus:outline-none focus:border-white",
+                  "bg-white text-black placeholder-gray-400 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-[#ffd12d]",
                 formFieldInputShowPasswordButton: "text-gray-400",
                 formFieldInputHidePasswordButton: "text-gray-400",
                 submitButton:
-                  "bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-black w-full mt-4",
+                  "bg-[#ffd12d] text-black rounded-md px-4 py-2 font-semibold hover:bg-[#49411c] hover:text-white w-full mt-4",
                 submitButtonLoading:
-                  "bg-black text-black opacity-50 cursor-not-allowed",
+                  "bg-yellow-200 text-yellow-600 opacity-50 cursor-not-allowed",
                 footer: "text-gray-500 text-center mt-6 text-sm",
-                formFieldAction: "text-gray-400 text-xs hover:underline",
-                formButtonReset: "text-gray-400 text-xs hover:underline",
-                identityPreview: "text-white",
-                identityPreviewEditButton: "text-gray-300 hover:underline",
+                formFieldAction: "text-[#b89c07] text-xs hover:underline",
+                formButtonReset: "text-[#b89c07] text-xs hover:underline",
+                identityPreview: "text-black",
+                identityPreviewEditButton: "text-[#b89c07] hover:underline",
               },
             }}
           />
