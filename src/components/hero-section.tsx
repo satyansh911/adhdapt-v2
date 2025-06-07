@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { Cover } from "./ui/cover";
+import { Separator } from "@/components/ui/separator"
+import Pattern from "./ui/pattern";
 
 export default function ADHDaptHeroSection() {
     const router = useRouter();
@@ -75,25 +77,29 @@ export default function ADHDaptHeroSection() {
             ❛Your fire just needs the <Cover>right spark</Cover>❜
           </motion.h1>
 
-          <p className="relative -top-80 right-105 text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-200">
+          <Separator className="relative -top-90"/>
+
+          <p className="relative -top-80 right-112 text-4xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
             We Get You
           </p>
+
+           <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            className="relative -top-85 right-58 mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
+          >
+            ADHD isn’t a flaw. It’s a different way of processing the world. We see you. We’re with you.
+          </motion.p>
+
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.2 }}
-            className="relative -top-90 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+            className="relative -top-105 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900 aspect-[16/9] h-[550px] w-[1250px]"
           >
-            <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
-              <img
-                src="/placeholder.svg?height=600&width=1000"
-                alt="ADHDapt dashboard preview showing productivity tools and ADHD management features"
-                className="aspect-[16/9] h-[600px] w-[1200px] object-cover"
-                height={600}
-                width={1000}
-              />
-            </div>
+            <img src="/brain.gif" className="size-40"></img>
           </motion.div>
         </div>
       </div>
