@@ -48,7 +48,7 @@ export default function SignInPage() {
       <div className="flex-1 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#fff6cc] via-[#fffde6] to-[#fff] flex justify-center items-center px-4 py-10">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-yellow-100 p-8">
           <div className="text-center mb-6">
-            <h1 className="text-4xl font-extrabold text-gray-800">Sign In</h1>
+            <h1 className="text-4xl font-extrabold text-gray-800">Login</h1>
             <p className="text-sm text-gray-500">
               Access your personalized ADHDapt experience
             </p>
