@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
+import { Cover } from "./ui/cover";
 
 export default function ADHDaptHeroSection() {
     const router = useRouter();
@@ -65,12 +66,24 @@ export default function ADHDaptHeroSection() {
               Learn More
             </button>
           </motion.div>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 1 }}
+            className="italic -top-95 text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-slate-900 dark:from-neutral-800 dark:via-white dark:to-white"
+          >
+            ❛Your fire just needs the <Cover>right spark</Cover>❜
+          </motion.h1>
+
+          <p className="relative -top-80 right-105 text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-200">
+            We Get You
+          </p>
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.2 }}
-            className="relative -top-100 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+            className="relative -top-90 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
           >
             <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
               <img
