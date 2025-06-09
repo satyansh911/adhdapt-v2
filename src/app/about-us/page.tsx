@@ -154,7 +154,7 @@ export default function AboutUsPage() {
         <div className="relative left-38">
           <SocialFloatingDock/>
         </div>
-        <div className="relative -bottom-12 -left-40">
+        <div className="relative -bottom-12 -left-48">
           &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
         </div>
       </footer>
