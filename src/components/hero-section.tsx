@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { Cover } from "./ui/cover";
 import { Separator } from "@/components/ui/separator"
 import Pattern from "./ui/pattern";
+import Card from "./ui/image-card";
+import HoverRevealCard from "./ui/image-card";
 
 export default function ADHDaptHeroSection() {
     const router = useRouter();
@@ -33,13 +35,13 @@ export default function ADHDaptHeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center"
           >
-            <img src="/animation.gif" className="relative -top-20 w-90 h-auto"/>
+            <img src="/animation.gif" className="relative -top-20 -left-25 w-90 h-auto"/>
             <h1 className="relative -top-50 text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-200">
               <span className="block ">ADHDapt</span>
               <span className="block text-lg md:text-2xl mt-2 text-slate-700 dark:text-slate-400 font-semibold">
                 Track. Understand. Thrive.
               </span>
-              <img src="/new-unscreen.gif" className="relative -top-40 left-230 w-90 h-auto"/>
+              <img src="/new-unscreen.gif" className="relative -top-40 left-220 w-90 h-auto"/>
             </h1>
             
           </motion.div>
@@ -79,7 +81,7 @@ export default function ADHDaptHeroSection() {
 
           <Separator className="relative -top-90"/>
 
-          <p className="relative -top-80 right-112 text-4xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
+          <p className="relative -top-80 right-90 text-4xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
             We Get You
           </p>
 
@@ -87,7 +89,7 @@ export default function ADHDaptHeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.5 }}
-            className="relative -top-85 right-58 mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
+            className="relative -top-85 right-36 mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
           >
             ADHD isn’t a flaw. It’s a different way of processing the world. We see you. We’re with you.
           </motion.p>
@@ -97,9 +99,97 @@ export default function ADHDaptHeroSection() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.2 }}
-            className="relative -top-105 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900 aspect-[16/9] h-[550px] w-[1250px]"
+            className="relative -top-105 new1 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900 aspect-[16/9] h-[550px] w-[1250px]"
           >
-            <img src="/brain.gif" className="size-40"></img>
+            <div className="relative w-60 top-5 left-5">
+              <HoverRevealCard
+                imageSrc="/image1.gif"
+                imageAlt="Person feeling overwhelmed with ADHD"
+                content={
+                  <div>
+                    <p>The Noise is Real</p>
+                    <p className="text-xs leading-relaxed font-medium">
+                      Sometimes, your brain feels like it's juggling 50 tabs — all open, all urgent.
+                      <br />
+                      <br />
+                      ADHD isn't about being lazy — it's about managing too much at once.
+                      <br />
+                      <br />
+                      <span className="text-orange-300 font-semibold">We help you quiet the noise.</span>
+                    </p>
+                  </div>
+                }
+              />
+            </div>
+            <div className="relative w-60 left-188 -top-55">
+              <HoverRevealCard
+                imageSrc="/image2.gif"
+                imageAlt="Person feeling overwhelmed with ADHD"
+                content={
+                  <div>
+                    <p>Not Broken, Just Wired Differently</p>
+                    <p className="text-xs leading-relaxed font-medium">
+                      Forgetfulness, distraction, overthinking — you're not “bad at life.”
+                      <br />
+                      <br />
+                      Your mind is a maze of brilliance.
+                      <br />
+                      <br />
+                      <span className="text-orange-300 font-semibold">ADHDapt is here to help you navigate, not fix you.</span>
+                    </p>
+                  </div>
+                }
+              />
+            </div>
+            <div className="relative w-60 left-5 -top-45">
+              <HoverRevealCard
+                imageSrc="/image3.png"
+                imageAlt="Person feeling overwhelmed with ADHD"
+                content={
+                  <div>
+                    <p>You Can Find Focus</p>
+                    <p className="text-xs leading-relaxed font-medium">
+                      You’re creative. Emotional. Passionate. Focus isn’t out of reach
+                      <br />
+                      <br />
+                      — it just takes the right tools, rhythm, and kindness to self.
+                      <br />
+                      <br />
+                      <span className="text-orange-300 font-semibold">ADHDapt helps you build that.</span>
+                    </p>
+                  </div>
+                }
+              />
+            </div>
+            <div className="relative w-60 -top-105 left-188">
+              <HoverRevealCard
+                imageSrc="/image4.gif"
+                imageAlt="Person feeling overwhelmed with ADHD"
+                content={
+                  <div>
+                    <p>You Deserve Rest, Too</p>
+                    <p className="text-xs leading-relaxed font-medium">
+                      You don’t have to earn rest by finishing everything.
+                      <br />
+                      <br />
+                      ADHDapt helps you work with your energy, not against it.
+                      <br />
+                      <br />
+                      <span className="text-orange-300 font-semibold">We remind you to pause, recharge, and breathe.</span>
+                    </p>
+                  </div>
+                }
+              />
+            </div>
+
+            <div className="relative w-100 h-100 -top-220 left-75">
+              <img src="/brain.gif" className="relative top-10 left-10 size-80"></img>
+              <img src="/giphy.gif"className="relative -top-80 left-0 rotate-180 size-30"></img>
+              <img src="/look-arrow.gif" className="relative -top-110 left-70 scale-y-[-1] rotate-x-40 -rotate-25 h-[80px] w-[130px]"></img>
+              <img src="/giphy.gif"className="relative -top-58 left-75 rotate-180 size-30 scale-y-[-1] scale-x-[-1]"></img>
+              <img src="/look-arrow.gif" className="relative -top-80 left-0 scale-x-[-1] rotate-x-40 -rotate-25 h-[80px] w-[130px]"></img>
+            </div>
+            
           </motion.div>
         </div>
       </div>
