@@ -8,9 +8,16 @@ import { Separator } from "@/components/ui/separator"
 import Pattern from "./ui/pattern";
 import Card from "./ui/image-card";
 import HoverRevealCard from "./ui/image-card";
+import { useState } from "react";
+
 
 export default function ADHDaptHeroSection() {
     const router = useRouter();
+    const [isFullScreen, setIsFullScreen] = useState(false);
+    const toggleFullScreen = () => {
+      setIsFullScreen(!isFullScreen);
+    };
+
   return (
     <div className="flex min-h-screen flex-col bg-white px-4 dark:bg-black">
       <Navbar />
@@ -96,11 +103,27 @@ export default function ADHDaptHeroSection() {
 
 
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.2 }}
-            className="relative -top-105 new1 z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900 aspect-[16/9] h-[550px] w-[1250px]"
+            initial={false}
+            animate={{
+              position: isFullScreen ? "fixed" : "relative",
+              top: isFullScreen ? 0 : "-330px",
+              left: isFullScreen ? 0 : "0",
+              width: isFullScreen ? "100vw" : "100%",
+              height: isFullScreen ? "100vh" : "600px",
+              zIndex: isFullScreen ? 50 : 10,
+              opacity:1, y:0
+            }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="new1 rounded-2xl border border-neutral-200 bg-neutral-100 shadow-md dark:border-neutral-800 dark:bg-neutral-900 aspect-[16/9]"
           >
+
+            <button
+              onClick={toggleFullScreen}
+              className="relative h-[35px] transform rounded-lg bg-blue-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600"
+            >
+              {isFullScreen ? "Exit Fullscreen" : "Expand"}
+            </button>
+            <div className="relative -top-3 left-6.5">
             <div className="relative w-60 top-5 left-5">
               <HoverRevealCard
                 imageSrc="/image1.gif"
@@ -178,8 +201,9 @@ export default function ADHDaptHeroSection() {
                 }
               />
             </div>
+            </div>
 
-            <div className="relative w-100 h-100 -top-220 left-75">
+            <div className="relative w-100 h-100 -top-225 left-80">
               <img src="/brain.gif" className="relative top-10 left-10 size-80"></img>
               <img src="/giphy.gif"className="relative -top-80 left-0 rotate-180 size-30"></img>
               <img src="/look-arrow.gif" className="relative -top-110 left-70 scale-y-[-1] rotate-x-40 -rotate-25 h-[80px] w-[130px]"></img>
