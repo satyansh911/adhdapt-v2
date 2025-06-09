@@ -107,10 +107,9 @@ export default function ADHDaptHeroSection() {
                 imageAlt="Person feeling overwhelmed with ADHD"
                 content={
                   <div>
-                    <p>The Noise is Real</p>
+                    <p className="text-orange-300 font-extrabold">The Noise is Real</p><br />
                     <p className="text-xs leading-relaxed font-medium">
                       Sometimes, your brain feels like it's juggling 50 tabs — all open, all urgent.
-                      <br />
                       <br />
                       ADHD isn't about being lazy — it's about managing too much at once.
                       <br />
@@ -127,10 +126,9 @@ export default function ADHDaptHeroSection() {
                 imageAlt="Person feeling overwhelmed with ADHD"
                 content={
                   <div>
-                    <p>Not Broken, Just Wired Differently</p>
+                    <p className="text-orange-300 font-extrabold">Not Broken, Just Wired Differently</p><br />
                     <p className="text-xs leading-relaxed font-medium">
                       Forgetfulness, distraction, overthinking — you're not “bad at life.”
-                      <br />
                       <br />
                       Your mind is a maze of brilliance.
                       <br />
@@ -147,10 +145,10 @@ export default function ADHDaptHeroSection() {
                 imageAlt="Person feeling overwhelmed with ADHD"
                 content={
                   <div>
-                    <p>You Can Find Focus</p>
+                    <p className="text-orange-300 font-extrabold">You Can Find Focus</p>
+                    <br/>
                     <p className="text-xs leading-relaxed font-medium">
                       You’re creative. Emotional. Passionate. Focus isn’t out of reach
-                      <br />
                       <br />
                       — it just takes the right tools, rhythm, and kindness to self.
                       <br />
@@ -167,10 +165,9 @@ export default function ADHDaptHeroSection() {
                 imageAlt="Person feeling overwhelmed with ADHD"
                 content={
                   <div>
-                    <p>You Deserve Rest, Too</p>
+                    <p className="text-orange-300 font-extrabold">You Deserve Rest, Too</p><br />
                     <p className="text-xs leading-relaxed font-medium">
                       You don’t have to earn rest by finishing everything.
-                      <br />
                       <br />
                       ADHDapt helps you work with your energy, not against it.
                       <br />
