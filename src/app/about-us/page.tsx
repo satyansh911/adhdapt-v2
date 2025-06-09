@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import SocialFloatingDock from "@/components/social-floating-dock";
 
 export default function AboutUsPage() {
   return (
@@ -95,8 +96,8 @@ export default function AboutUsPage() {
           </motion.blockquote>
 
           {/* Team Section */}
-          <section className="grid md:grid-cols-2 gap-10 mt-20">
-              <AnimatedTestimonials
+          <section className=" relative grid md:grid-cols-2 gap-10 mt-12 left-20">
+              <AnimatedTestimonials 
                 testimonials={[
                   {
                     quote:
@@ -115,7 +116,7 @@ export default function AboutUsPage() {
                 ]}
               />
 
-            <div>
+            <div className="relative -left-10 h-[350px] w-[490px]">
               <h2 className="text-4xl font-extrabold mb-4 text-[#ffd12d]">
                 THE TEAM.
               </h2>
@@ -149,20 +150,12 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-8 text-neutral-500 text-sm px-4 gap-10">
-        <div>
-          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 -mt-10 text-neutral-500 text-sm px-4 gap-10">
+        <div className="relative left-38">
+          <SocialFloatingDock/>
         </div>
-        <div className="flex gap-6">
-          <a href="#" className="hover:underline">
-            instagram.
-          </a>
-          <a href="#" className="hover:underline">
-            facebook.
-          </a>
-          <a href="#" className="hover:underline">
-            twitter.
-          </a>
+        <div className="relative -bottom-12 -left-40">
+          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
         </div>
       </footer>
     </div>
