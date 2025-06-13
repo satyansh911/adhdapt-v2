@@ -3,7 +3,7 @@
 import { useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
+import Spline from "@splinetool/react-spline";
 
 export default function DashboardPage() {
   const { isSignedIn, isLoaded } = useAuth();
@@ -18,8 +18,10 @@ export default function DashboardPage() {
   if (!isLoaded || !isSignedIn) return null;
 
   return (
-    <div className="min-h-screen bg-neutral-900 p-6">
-      Hello
+    <div className="min-h-screen bg-black p-6 flex items-center">
+      <div className="w-full ">
+        <Spline scene="https://prod.spline.design/NEOgEktF87ReCehV/scene.splinecode" />
+      </div>
     </div>
   );
 }
