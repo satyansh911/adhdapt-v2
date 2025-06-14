@@ -9,6 +9,8 @@ import Pattern from "./ui/pattern";
 import Card from "./ui/image-card";
 import HoverRevealCard from "./ui/image-card";
 import { useState } from "react";
+import MyMap from "./ui/world-map";
+import ADHDMap from "./ADHDmap";
 
 
 export default function ADHDaptHeroSection() {
@@ -212,6 +214,9 @@ export default function ADHDaptHeroSection() {
             </div>
             
           </motion.div>
+          <div>
+            <ADHDMap/>
+          </div>
         </div>
       </div>
     </div>
