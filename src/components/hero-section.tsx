@@ -11,6 +11,9 @@ import HoverRevealCard from "./ui/image-card";
 import { useState } from "react";
 import MyMap from "./ui/world-map";
 import ADHDMap from "./ADHDmap";
+import Button from "./ui/button";
+import HoverButton from "./ui/button";
+import ADHDComprehensiveStats from "./ui/adhdComprehensiveStats";
 
 
 export default function ADHDaptHeroSection() {
@@ -44,13 +47,13 @@ export default function ADHDaptHeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center"
           >
-            <img src="/animation.gif" className="relative -top-20 -left-25 w-90 h-auto"/>
+            <img src="/animation.gif" className="relative -top-20 left-10 w-90 h-auto"/>
             <h1 className="relative -top-50 text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-200">
               <span className="block ">ADHDapt</span>
               <span className="block text-lg md:text-2xl mt-2 text-slate-700 dark:text-slate-400 font-semibold">
                 Track. Understand. Thrive.
               </span>
-              <img src="/new-unscreen.gif" className="relative -top-40 left-220 w-90 h-auto"/>
+              <img src="/new-unscreen.gif" className="relative -top-40 left-240 w-90 h-auto"/>
             </h1>
             
           </motion.div>
@@ -88,9 +91,10 @@ export default function ADHDaptHeroSection() {
             ❛Your fire just needs the <Cover>right spark</Cover>❜
           </motion.h1>
 
-          <Separator className="relative -top-90"/>
+          <Separator className="relative -top-90 w-[400px] h-[1px] bg-gray-200 dark:bg-slate-400" />
 
-          <p className="relative -top-80 right-90 text-4xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
+
+          <p className="relative -top-80 text-4xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
             We Get You
           </p>
 
@@ -98,7 +102,7 @@ export default function ADHDaptHeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.5 }}
-            className="relative -top-85 right-36 mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
+            className="relative -top-85  mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
           >
             ADHD isn’t a flaw. It’s a different way of processing the world. We see you. We’re with you.
           </motion.p>
@@ -109,8 +113,8 @@ export default function ADHDaptHeroSection() {
             animate={{
               position: isFullScreen ? "fixed" : "relative",
               top: isFullScreen ? 0 : "-330px",
-              left: isFullScreen ? 0 : "0",
-              width: isFullScreen ? "100vw" : "100%",
+              left: isFullScreen ? 0 : "30px",
+              width: isFullScreen ? "100vw" : "95%",
               height: isFullScreen ? "100vh" : "600px",
               zIndex: isFullScreen ? 50 : 10,
               opacity:1, y:0
@@ -125,7 +129,7 @@ export default function ADHDaptHeroSection() {
             >
               {isFullScreen ? "Exit Fullscreen" : "Expand"}
             </button>
-            <div className="relative -top-3 left-6.5">
+            <div className="relative h-[600px] -top-3 left-6">
             <div className="relative w-60 top-5 left-5">
               <HoverRevealCard
                 imageSrc="/image1.gif"
@@ -145,7 +149,7 @@ export default function ADHDaptHeroSection() {
                 }
               />
             </div>
-            <div className="relative w-60 left-188 -top-55">
+            <div className="relative w-60 left-230 -top-55">
               <HoverRevealCard
                 imageSrc="/image2.gif"
                 imageAlt="Person feeling overwhelmed with ADHD"
@@ -184,7 +188,7 @@ export default function ADHDaptHeroSection() {
                 }
               />
             </div>
-            <div className="relative w-60 -top-105 left-188">
+            <div className="relative w-60 -top-105 left-230">
               <HoverRevealCard
                 imageSrc="/image4.gif"
                 imageAlt="Person feeling overwhelmed with ADHD"
@@ -206,16 +210,50 @@ export default function ADHDaptHeroSection() {
             </div>
 
             <div className="relative w-100 h-100 -top-225 left-80">
-              <img src="/brain.gif" className="relative top-10 left-10 size-80"></img>
-              <img src="/giphy.gif"className="relative -top-80 left-0 rotate-180 size-30"></img>
-              <img src="/look-arrow.gif" className="relative -top-110 left-70 scale-y-[-1] rotate-x-40 -rotate-25 h-[80px] w-[130px]"></img>
-              <img src="/giphy.gif"className="relative -top-58 left-75 rotate-180 size-30 scale-y-[-1] scale-x-[-1]"></img>
-              <img src="/look-arrow.gif" className="relative -top-80 left-0 scale-x-[-1] rotate-x-40 -rotate-25 h-[80px] w-[130px]"></img>
+              <img src="/brain.gif" className="relative top-100 left-35 size-80"></img>
+              <img src="/giphy.gif"className="relative w-[180px] h-[160px] top-10 left-0 rotate-180 size-30"></img>
+              <img src="/look-arrow.gif" className="relative -top-30 left-100 scale-y-[-1] rotate-x-40 -rotate-25 h-[130px] w-[180px]"></img>
+              <img src="/giphy.gif"className="relative w-[180px] h-[160px] top-10 left-100 rotate-180 size-30 scale-y-[-1] scale-x-[-1]"></img>
+              <img src="/look-arrow.gif" className="relative -top-25 left-5 scale-x-[-1] rotate-x-40 -rotate-25 h-[130px] w-[180px]"></img>
             </div>
-            
           </motion.div>
-          <div>
+          <Separator className="relative -top-70"/>
+          <motion.div>
+            <div>
+              <p className="relative -top-60 text-4xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
+                You're Not Alone
+              </p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.5 }}
+                className="relative -top-62 mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
+              >
+                ADHD Around the World
+              </motion.p>
+            </div>
+          </motion.div>
+          <div className="relative -top-85">
             <ADHDMap/>
+          </div>
+          <div className="relative -top-111 px-10">
+            <div className="flex justify-between items-center w-full max-w-[750px] mx-auto">
+              <HoverButton 
+                text="World Health Organisation" 
+                imgSrc="/who.png" 
+                alt="WHO logo" 
+                link="https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/child-and-adolescent-mental-disorders/pharmacological-and-nonpharmacological-interventions-for-children-with-attention-deficit-hyperactivity-disorder-(adhd)"
+              />
+              <HoverButton 
+                text="Centers For Disease Control" 
+                imgSrc="/CDC.png" 
+                alt="CDC logo" 
+                link="https://www.cdc.gov/adhd/data/index.html"
+              />
+            </div>
+            <div>
+              <ADHDComprehensiveStats/>
+            </div>
           </div>
         </div>
       </div>

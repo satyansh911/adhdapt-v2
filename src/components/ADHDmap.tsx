@@ -49,7 +49,7 @@ export default function ADHDMap() {
                         fill: data ? "#fed02d" : "#d3d3d3",
                         stroke: "#000",
                         strokeWidth: 0.5,
-                        outline: "none",
+                        outline: "#000",
                     },
                     hover: {
                         fill: "#2a9d8f",
@@ -74,7 +74,7 @@ export default function ADHDMap() {
       {tooltip && (
         <div
           className="fixed bg-yellow-500 text-black text-sm px-2 py-1 rounded shadow-lg pointer-events-none z-10"
-          style={{ top: position.y + 10, left: position.x + 10 }}
+          style={{ top: position.y + 20, left: position.x - 100}}
           dangerouslySetInnerHTML={{ __html: tooltip }}
         />
       )}
