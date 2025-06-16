@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import SocialFloatingDock from "@/components/social-floating-dock";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -20,9 +21,9 @@ export default function ContactPage() {
         <div className="absolute inset-y-0 right-0 w-px bg-neutral-200/80">
           <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-[#ffd12d] to-transparent" />
         </div>
-        <div className="absolute bottom-0 inset-x-0 h-px bg-neutral-200/80">
+        {/* <div className="absolute bottom-0 inset-x-0 h-px bg-neutral-200/80">
           <div className="mx-auto h-px w-40 bg-gradient-to-r from-transparent via-[#ffd12d] to-transparent" />
-        </div>
+        </div> */}
 
         {/* Content */}
         <div className="z-10 w-full max-w-3xl py-10 md:py-20 px-4">
@@ -127,59 +128,15 @@ export default function ContactPage() {
               </motion.div>
             )}
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.6 }}
-            className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-2xl mx-auto"
-          >
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-[#ffd12d] mb-2">
-                Email
-              </h3>
-              <a
-                href="mailto:hello@adhdapt.com"
-                className="inline-block bg-[#ffd12d] hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded-full transition"
-              >
-                hello@adhdapt.com
-              </a>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-[#ffd12d] mb-2">
-                Follow Us
-              </h3>
-              <div className="flex gap-4">
-                <a href="#" className="hover:underline">
-                  instagram.
-                </a>
-                <a href="#" className="hover:underline">
-                  facebook.
-                </a>
-                <a href="#" className="hover:underline">
-                  twitter.
-                </a>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
 
-      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-8 text-neutral-500 text-sm px-4 gap-10">
-        <div>
-          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 -mt-10 text-neutral-500 text-sm px-4 gap-10">
+        <div className="relative left-38">
+          <SocialFloatingDock />
         </div>
-
-        <div className="flex gap-6">
-          <a href="#" className="hover:underline">
-            instagram.
-          </a>
-          <a href="#" className="hover:underline">
-            facebook.
-          </a>
-          <a href="#" className="hover:underline">
-            twitter.
-          </a>
+        <div className="relative -bottom-12 -left-48">
+          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
         </div>
       </footer>
     </div>
