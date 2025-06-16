@@ -18,8 +18,6 @@ import {
 import GroupIcon from "./icons/groupIcon"
 import BrainIcon from "./icons/brainIcon"
 import RatioIcon from "./icons/ratioIcon"
-
-// Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend)
 
 const ADHDComprehensiveStats = () => {
