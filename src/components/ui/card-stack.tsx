@@ -3,6 +3,7 @@ import { useEffect, useState, type RefObject } from "react"
 import type React from "react"
 
 import { motion, useScroll, useTransform } from "motion/react"
+import Button from "./button2"
 
 type Feature = {
   icon: React.ReactNode
@@ -196,11 +197,10 @@ export const CardStack = ({
                 )}
 
                 {/* Button */}
-                <button className="relative bg-blue-500 dark:bg-blue-600 text-white text-sm font-bold py-3 px-5 border-[0.2em] border-slate-900 dark:border-white rounded shadow-[0.3em_0.3em_0_rgba(0,0,0,0.8)] dark:shadow-[0.3em_0.3em_0_rgba(255,255,255,0.2)] cursor-pointer transition-all duration-200 overflow-hidden uppercase tracking-wider hover:translate-y-[-0.1em] hover:translate-x-[-0.1em] hover:shadow-[0.4em_0.4em_0_rgba(0,0,0,0.8)] active:translate-y-[0.1em] active:translate-x-[0.1em] active:shadow-[0.15em_0.15em_0_rgba(0,0,0,0.8)]">
-                  Get Started
-                  {/* Shine effect */}
-                  <div className="absolute top-0 left-[-100%] w-full h-full bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.2)_50%,transparent_100%)] transition-[left] duration-600 group-hover:left-[100%]"></div>
-                </button>
+                <Button bgColor="#fa2c37"/>
+                <img src="/game3.gif" className="relative size-24 left-38"/>
+                <img src="/game1.gif" className="relative size-24 w-40 left-18"/>
+                <img src="/game.gif" className="size-24 w-30"/>
               </div>
             </div>
 

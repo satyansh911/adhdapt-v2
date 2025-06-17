@@ -1,0 +1,60 @@
+import React from 'react'
+import styled from 'styled-components'
+
+interface ButtonProps {
+  bgColor?: string
+}
+
+const Button: React.FC<ButtonProps> = ({ bgColor = 'rgb(64, 192, 87)' }) => {
+  return (
+    <StyledWrapper bgColor={bgColor}>
+      <button>Let's Game</button>
+    </StyledWrapper>
+  )
+}
+
+const StyledWrapper = styled.div<{ bgColor: string }>`
+  button {
+    --width: 150px;
+    --timing: 2s;
+    border: 0;
+    width: var(--width);
+    padding-block: 1em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    background: ${({ bgColor }) => bgColor};
+    transition: all 0.2s;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-image: linear-gradient(
+      to right,
+      rgb(250, 82, 82),
+      rgb(250, 82, 82) 16.65%,
+      rgb(190, 75, 219) 16.65%,
+      rgb(190, 75, 219) 33.3%,
+      rgb(76, 110, 245) 33.3%,
+      rgb(76, 110, 245) 49.95%,
+      rgb(64, 192, 87) 49.95%,
+      rgb(64, 192, 87) 66.6%,
+      rgb(250, 176, 5) 66.6%,
+      rgb(250, 176, 5) 83.25%,
+      rgb(253, 126, 20) 83.25%,
+      rgb(253, 126, 20) 100%,
+      rgb(250, 82, 82) 100%
+    );
+    animation: var(--timing) linear dance6123 infinite;
+    transform: scale(1.1) translateY(-1px);
+  }
+
+  @keyframes dance6123 {
+    to {
+      background-position: var(--width);
+    }
+  }
+`
+
+export default Button
