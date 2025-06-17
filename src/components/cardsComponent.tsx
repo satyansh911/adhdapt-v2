@@ -5,39 +5,11 @@ import { motion } from "framer-motion";
 import { CardStack } from "@/components/ui/card-stack"
 import { cn } from "@/lib/utils"
 import { useRouter } from "next/navigation";
+import GameIcon from "./ui/icons/gamification";
+import GameSubIcon from "./ui/icons/gameSubIcon";
+import ProgressIcon from "./ui/icons/progressIcon";
+import StreakIcon from "./ui/icons/streakIcon";
 
-export default function CardStackDemo() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const router = useRouter();
-  return (
-    <div className="w-full">
-      <div
-        ref={containerRef}
-        className="h-[1000vh] relative"
-      >
-        <div className="sticky top-0 h-screen flex items-center justify-center">
-          <div className="relative -top-5 -left-40">
-            <p className="text-2xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
-              Your<br/>ADHDapt<br/>Toolkit
-            </p>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.5 }}
-              className="relative mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
-            >
-              ADHD isn’t a flaw.<br/> It’s a different way of<br/> processing the world.<br/> We see you.<br/> We’re with you.
-            </motion.p>
-            <button onClick={() => router.push("/sign-up")} className="w-50 transform rounded-lg bg-[#ffd12d] px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white dark:bg-emerald-500 dark:hover:bg-emerald-600">
-              Get Started Now
-            </button>
-          </div>
-          <CardStack items={ADHD_FEATURES} containerRef={containerRef} />
-        </div>
-      </div>
-    </div>
-  )
-}
 export const Highlight = ({
   children,
   className,
@@ -64,10 +36,15 @@ const ADHD_FEATURES = [
     designation: "Core Features",
     emoji: "🎯",
     gradient: "from-red-500 to-orange-500",
+    features: [
+      { icon: <GameSubIcon/>, text: "Focus Games" },
+      { icon: <ProgressIcon/>, text: "Progress Tracking" },
+      { icon: <StreakIcon/>, text: "Streak Motivation" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-2xl">🎯</span>
+          <span className="text-2xl"><GameIcon/></span>
           <h3 className="font-bold text-lg text-slate-800 dark:text-slate-200">Gamified Focus Tools</h3>
         </div>
         <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
@@ -83,6 +60,11 @@ const ADHD_FEATURES = [
     designation: "AI-Powered",
     emoji: "⏰",
     gradient: "from-blue-500 to-cyan-500",
+    features: [
+      { icon: "🤖", text: "Smart Suggestions" },
+      { icon: "📅", text: "Adaptive Reminders" },
+      { icon: "🧘", text: "Flexible Routines" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
@@ -102,6 +84,11 @@ const ADHD_FEATURES = [
     designation: "Mental Health",
     emoji: "🎧",
     gradient: "from-green-500 to-teal-500",
+    features: [
+      { icon: "🤖", text: "Mood Logging" },
+      { icon: "📅", text: "Soothing Audio" },
+      { icon: "🧘", text: "Emotional Insights" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
@@ -121,6 +108,11 @@ const ADHD_FEATURES = [
     designation: "Personal Growth",
     emoji: "🧠",
     gradient: "from-purple-500 to-pink-500",
+    features: [
+      { icon: "🤖", text: "Guided Prompts" },
+      { icon: "📅", text: "Tag & Track" },
+      { icon: "🧘", text: "Progress Graphs" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
@@ -140,6 +132,11 @@ const ADHD_FEATURES = [
     designation: "Productivity",
     emoji: "✅",
     gradient: "from-indigo-500 to-blue-500",
+    features: [
+      { icon: "🤖", text: "Chunking" },
+      { icon: "📅", text: "Distraction Blocker" },
+      { icon: "🧘", text: "Deep Work View" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
@@ -159,6 +156,11 @@ const ADHD_FEATURES = [
     designation: "Family & Care",
     emoji: "👥",
     gradient: "from-amber-500 to-orange-500",
+    features: [
+      { icon: "🤖", text: "Progress Dashboards" },
+      { icon: "📅", text: "Permissioned Access" },
+      { icon: "🧘", text: "Targeted Insights" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
@@ -178,6 +180,11 @@ const ADHD_FEATURES = [
     designation: "Social Support",
     emoji: "💬",
     gradient: "from-rose-500 to-pink-500",
+    features: [
+      { icon: "🤖", text: "Group Chats" },
+      { icon: "📅", text: "Support Pings" },
+      { icon: "🧘", text: "Pinned Threads" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
@@ -197,6 +204,11 @@ const ADHD_FEATURES = [
     designation: "Education",
     emoji: "📘",
     gradient: "from-violet-500 to-purple-500",
+    features: [
+      { icon: "🤖", text: "Bite-Sized Reads" },
+      { icon: "📅", text: "Research Simplified" },
+      { icon: "🧘", text: "Real Stories" },
+    ],
     content: (
       <div className="space-y-3">
         <div className="flex items-center gap-2 mb-3">
@@ -211,3 +223,36 @@ const ADHD_FEATURES = [
     ),
   },
 ]
+
+export default function CardStackDemo() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const router = useRouter();
+  return (
+    <div className="w-full">
+      <div
+        ref={containerRef}
+        className="h-[1350vh] relative"
+      >
+        <div className="sticky top-0 h-screen flex items-center justify-center">
+          <div className="relative -top-0 -left-65">
+            <p className="text-2xl md:text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200">
+              Your<br/>ADHDapt<br/>Toolkit
+            </p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+              className="relative mx-auto max-w-4xl py-6 text-lg text-neutral-600 dark:text-neutral-400"
+            >
+              Track your moods,<br/> manage tasks, and<br/> break through burnout.
+            </motion.p>
+            <button onClick={() => router.push("/sign-up")} className="w-50 transform rounded-lg bg-[#ffd12d] px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white dark:bg-emerald-500 dark:hover:bg-emerald-600">
+              Get Started Now
+            </button>
+          </div>
+          <CardStack items={ADHD_FEATURES} containerRef={containerRef} />
+        </div>
+      </div>
+    </div>
+  )
+}
