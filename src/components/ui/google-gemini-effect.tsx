@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { motion, MotionValue } from "motion/react";
 import React from "react";
+import {ColourfulText} from "@/components/ui/colourful-text";
 
 const transition = {
   duration: 0,
@@ -10,7 +11,6 @@ const transition = {
 
 export const GoogleGeminiEffect = ({
   pathLengths,
-  title,
   description,
   className,
 }: {
@@ -22,7 +22,7 @@ export const GoogleGeminiEffect = ({
   return (
     <div className={cn(className)}>
       <p className="text-9xl md:text-7xl font-extrabold pb-4 text-center bg-clip-text text-transparent mt-60 bg-gradient-to-b from-neutral-100 to-neutral-300">
-        {title || `Get Better 1% everyday with ADHDapt`}
+        get <ColourfulText text="1% better"/> everyday.
       </p>
 
       <p className="text-xs md:text-xl font-semibold text-center text-neutral-400 mt-4 mb-45 max-w-lg mx-auto">

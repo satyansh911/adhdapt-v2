@@ -20,12 +20,11 @@ export default function DashboardPage() {
 
   return (
     <div
-      className="flex flex-col bg-black px-4 dark:bg-black"
+      className="flex flex-col bg-black px-4 dark:bg-black "
       style={{ minHeight: "200vh" }}
     >
       <GoogleGeminiEffect
         pathLengths={pathLengths}
-        title="get 1% better everyday."
         description="Track. Understand. Thrive."
       />
 
