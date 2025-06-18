@@ -8,7 +8,7 @@ interface Props extends LucideProps {
   isActive?: boolean;
 }
 
-const ProgressIcon: React.FC<Props> = ({ size = 24 }) => {
+const ProgressIcon: React.FC<Props> = ({ size = 40 }) => {
   return (
     <Player
       autoplay
