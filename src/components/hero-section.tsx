@@ -16,6 +16,7 @@ import HoverButton from "./ui/button";
 import ADHDComprehensiveStats from "./ui/adhdComprehensiveStats";
 import CardStackDemo from "./cardsComponent";
 import { CardStack } from "./ui/card-stack";
+import Testimonials from "./testimonials";
 
 
 export default function ADHDaptHeroSection() {
@@ -258,6 +259,9 @@ export default function ADHDaptHeroSection() {
             </div>
             <div className="relative">
                 <CardStackDemo />
+            </div>
+            <div className="h-50 w-240">
+              <Testimonials/>
             </div>
           </div>
         </div>
