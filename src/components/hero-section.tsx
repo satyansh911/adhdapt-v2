@@ -27,7 +27,7 @@ export default function ADHDaptHeroSection() {
     };
 
   return (
-    <div className="flex min-h-screen flex-col bg-white px-4 dark:bg-black">
+    <div className="flex max-h-screen flex-col bg-white px-4 dark:bg-black">
       <Navbar />
 
       {/* Decorative lines */}
@@ -43,7 +43,7 @@ export default function ADHDaptHeroSection() {
         </div>
 
         {/* Main Content */}
-        <div className="z-10 text-center py-10 md:py-20">
+        <div className="z-10 h-3500 text-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -262,6 +262,115 @@ export default function ADHDaptHeroSection() {
             </div>
             <div className="h-50 w-240">
               <Testimonials/>
+            </div>
+            <div className="mt-10">
+              <h1>This is a link</h1>
+            </div>
+            <div className="mt-16 relative top-120">
+              <div className="container mx-auto px-4">
+                <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+                  {/* Left Side - ADHD Articles & Resources */}
+                  <div className="space-y-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-200">
+                      Learn More About ADHD
+                    </h2>
+                    <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                      Explore trusted resources and expert insights about ADHD to better understand this
+                      neurodevelopmental condition.
+                    </p>
+
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-300">Featured Articles</h3>
+
+                      <div className="space-y-3">
+                        <a
+                          href="https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+                        >
+                          <h4 className="font-semibold text-blue-800 dark:text-blue-300">NIMH: What is ADHD?</h4>
+                          <p className="text-sm text-blue-700 dark:text-blue-400 mt-1">
+                            Comprehensive overview from the National Institute of Mental Health
+                          </p>
+                        </a>
+
+                        <a
+                          href="https://chadd.org/about-adhd/overview/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-400 hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors"
+                        >
+                          <h4 className="font-semibold text-green-800 dark:text-green-300">CHADD: ADHD Overview</h4>
+                          <p className="text-sm text-green-700 dark:text-green-400 mt-1">
+                            Evidence-based information from Children and Adults with ADHD
+                          </p>
+                        </a>
+
+                        <a
+                          href="https://www.additudemag.com/what-is-adhd-symptoms-causes-treatments/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-purple-400 hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors"
+                        >
+                          <h4 className="font-semibold text-purple-800 dark:text-purple-300">
+                            ADDitude: Understanding ADHD
+                          </h4>
+                          <p className="text-sm text-purple-700 dark:text-purple-400 mt-1">
+                            Practical insights and strategies for living with ADHD
+                          </p>
+                        </a>
+
+                        <a
+                          href="https://www.understood.org/en/articles/adhd-what-you-need-to-know"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border-l-4 border-orange-400 hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors"
+                        >
+                          <h4 className="font-semibold text-orange-800 dark:text-orange-300">
+                            Understood: ADHD Basics
+                          </h4>
+                          <p className="text-sm text-orange-700 dark:text-orange-400 mt-1">
+                            Clear explanations for individuals and families
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side - Simplified Call to Action */}
+                  <div className="space-y-6">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-slate-200">
+                      Ready to Get Started?
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      Join our community and start your journey with ADHD support tools designed for your unique needs.
+                    </p>
+
+                    <div className="flex flex-col gap-4">
+                      <button
+                        onClick={() => router.push("/sign-up")}
+                        className="w-full transform rounded-lg bg-[#ffd12d] px-8 py-4 font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white text-lg shadow-lg"
+                      >
+                        Start Free Trial
+                      </button>
+
+                      <button
+                        onClick={() => router.push("/resources")}
+                        className="w-full transform rounded-lg border-2 border-[#ffd12d] bg-transparent px-8 py-4 font-semibold text-[#ffd12d] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffd12d] hover:text-black text-lg"
+                      >
+                        Browse Resources
+                      </button>
+                    </div>
+
+                    <div className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
+                      <p className="text-sm text-green-700 dark:text-green-400 font-medium">
+                        ✨ Free forever • No credit card required
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
