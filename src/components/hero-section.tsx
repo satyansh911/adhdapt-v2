@@ -17,6 +17,7 @@ import ADHDComprehensiveStats from "./ui/adhdComprehensiveStats";
 import CardStackDemo from "./cardsComponent";
 import { CardStack } from "./ui/card-stack";
 import Testimonials from "./testimonials";
+import SocialFloatingDock from "./social-floating-dock";
 
 
 export default function ADHDaptHeroSection() {
@@ -42,8 +43,7 @@ export default function ADHDaptHeroSection() {
           <div className="mx-auto h-px w-40 bg-gradient-to-r from-transparent via-[#ffd12d] to-transparent" />
         </div>
 
-        {/* Main Content */}
-        <div className="z-10 h-3500 text-center py-10 md:py-20">
+        <div className="z-10 h-3520 text-center py-10 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -266,7 +266,7 @@ export default function ADHDaptHeroSection() {
             <div className="mt-10">
               <h1>This is a link</h1>
             </div>
-            <div className="mt-16 relative top-120">
+            <div className="mt-16 relative top-110">
               <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
                   {/* Left Side - ADHD Articles & Resources */}
@@ -326,7 +326,7 @@ export default function ADHDaptHeroSection() {
                         onClick={() => router.push("/sign-up")}
                         className="w-full transform rounded-lg bg-[#ffd12d] px-8 py-4 font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#49411c] hover:text-white text-lg shadow-lg"
                       >
-                        Start Free Trial
+                        Start Your Journey
                       </button>
 
                       <button
@@ -349,6 +349,14 @@ export default function ADHDaptHeroSection() {
           </div>
         </div>
       </div>
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-0 text-neutral-500 text-sm px-4 gap-10">
+        <div className="relative left-38">
+          <SocialFloatingDock/>
+        </div>
+        <div className="relative -bottom-12 -left-48">
+          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }
