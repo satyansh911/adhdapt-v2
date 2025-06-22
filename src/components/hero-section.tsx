@@ -283,62 +283,36 @@ export default function ADHDaptHeroSection() {
                       <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-300">Featured Articles</h3>
 
                       <div className="space-y-3">
-                        <a
-                          href="https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
-                        >
-                          <h4 className="font-semibold text-blue-800 dark:text-blue-300">NIMH: What is ADHD?</h4>
-                          <p className="text-sm text-blue-700 dark:text-blue-400 mt-1">
-                            Comprehensive overview from the National Institute of Mental Health
-                          </p>
-                        </a>
+                        <HoverButton 
+                          text="NIMH: What is ADHD?" 
+                          imgSrc="/NIHlogo.png" 
+                          alt="WHO logo" 
+                          link="https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd"
+                        />
 
-                        <a
-                          href="https://chadd.org/about-adhd/overview/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-400 hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors"
-                        >
-                          <h4 className="font-semibold text-green-800 dark:text-green-300">CHADD: ADHD Overview</h4>
-                          <p className="text-sm text-green-700 dark:text-green-400 mt-1">
-                            Evidence-based information from Children and Adults with ADHD
-                          </p>
-                        </a>
+                        <HoverButton 
+                          text="CHADD: ADHD Overview" 
+                          imgSrc="/CHADDlogo.png" 
+                          alt="WHO logo" 
+                          link="https://chadd.org/about-adhd/overview/"
+                        />
 
-                        <a
-                          href="https://www.additudemag.com/what-is-adhd-symptoms-causes-treatments/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-purple-400 hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors"
-                        >
-                          <h4 className="font-semibold text-purple-800 dark:text-purple-300">
-                            ADDitude: Understanding ADHD
-                          </h4>
-                          <p className="text-sm text-purple-700 dark:text-purple-400 mt-1">
-                            Practical insights and strategies for living with ADHD
-                          </p>
-                        </a>
+                        <HoverButton 
+                          text="ADDitude: Understanding ADHD" 
+                          imgSrc="/ADDITUDElogo.png" 
+                          alt="WHO logo" 
+                          link="https://www.additudemag.com/what-is-adhd-symptoms-causes-treatments/"
+                        />
 
-                        <a
-                          href="https://www.understood.org/en/articles/adhd-what-you-need-to-know"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border-l-4 border-orange-400 hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors"
-                        >
-                          <h4 className="font-semibold text-orange-800 dark:text-orange-300">
-                            Understood: ADHD Basics
-                          </h4>
-                          <p className="text-sm text-orange-700 dark:text-orange-400 mt-1">
-                            Clear explanations for individuals and families
-                          </p>
-                        </a>
+                        <HoverButton 
+                          text="Understood: ADHD Basics" 
+                          imgSrc="/Understoodlogo.png" 
+                          alt="WHO logo" 
+                          link="https://www.understood.org/en/articles/adhd-what-you-need-to-know"
+                        />
                       </div>
                     </div>
                   </div>
-
-                  {/* Right Side - Simplified Call to Action */}
                   <div className="space-y-6">
                     <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-slate-200">
                       Ready to Get Started?

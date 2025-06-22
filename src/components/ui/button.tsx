@@ -62,7 +62,7 @@ const StyledWrapper = styled.div`
   }
 
   .logo {
-    width: 48px;
+    width: full;
     height: 48px;
     transition: transform 0.3s ease;
   }
