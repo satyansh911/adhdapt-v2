@@ -1,5 +1,6 @@
 "use client";
 
+import SocialFloatingDock from "@/components/social-floating-dock";
 import { SignIn } from "@clerk/nextjs";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
@@ -91,6 +92,14 @@ export default function SignInPage() {
           />
         </div>
       </div>
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-3 text-neutral-500 text-sm px-4 gap-10">
+        <div className="relative left-38">
+          <SocialFloatingDock />
+        </div>
+        <div className="relative -bottom-12 -left-48">
+          &copy; {new Date().getFullYear()} ADHDapt. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }
