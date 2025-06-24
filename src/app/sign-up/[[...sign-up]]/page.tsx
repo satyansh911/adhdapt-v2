@@ -50,7 +50,7 @@ export default function SignUpPage() {
         <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-yellow-100 p-8">
           <div className="text-center mb-6">
             <h1 className="text-4xl font-extrabold text-gray-800">Sign Up</h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 mt-1">
               Start your journey with ADHDapt today
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function SignUpPage() {
           />
         </div>
       </div>
-      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-5 text-neutral-500 text-sm px-4 gap-10">
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 mt-1 text-neutral-500 text-sm px-4 gap-10">
         <div className="relative left-38">
           <SocialFloatingDock />
         </div>
