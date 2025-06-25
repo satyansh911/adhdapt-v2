@@ -263,10 +263,7 @@ export default function ADHDaptHeroSection() {
             <div className="h-50 w-240">
               <Testimonials/>
             </div>
-            <div className="mt-10">
-              <h1>This is a link</h1>
-            </div>
-            <div className="mt-16 relative top-110">
+            <div className="mt-16 relative top-130">
               <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
                   {/* Left Side - ADHD Articles & Resources */}
