@@ -31,7 +31,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl md:text-6xl font-extrabold mb-8 tracking-tight text-black text-center"
+            className="text-5xl -mt-10 md:text-6xl font-extrabold mb-8 tracking-tight text-black text-center"
           >
             Contact Us
           </motion.h1>
@@ -131,7 +131,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 -mt-10 text-neutral-500 text-sm px-4 gap-10">
+      <footer className="w-full flex justify-center items-center border-t border-neutral-200 pt-6 pb-8 -mt-15 text-neutral-500 text-sm px-4 gap-10">
         <div className="relative left-38">
           <SocialFloatingDock />
         </div>
