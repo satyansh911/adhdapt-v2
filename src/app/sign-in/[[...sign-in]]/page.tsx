@@ -148,7 +148,13 @@ export default function LoginComponent() {
             </div>
           </div> */}
         </div>
-        <div className="flex-1 p-12 flex flex-col justify-center relative">
+        <div className="flex-1 p-12 flex flex-col justify-center relative overflow-hidden">
+          {/* Background SVG Pattern */}
+          <img
+            src="/topography.svg"
+            alt="Background pattern"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 -z-10"
+          />
           <div className="max-w-md mx-auto w-full">
             <div className="mb-2 text-center">
               <h2 className="text-2xl font-bold text-slate-900 bg-clip-text mb-0">
