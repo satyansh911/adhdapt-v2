@@ -1,0 +1,52 @@
+[33m9120a93[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to origin/main
+[33m0f9e39b[m HEAD@{1}: commit: Configured Login Page
+[33m91a2abd[m HEAD@{2}: commit: Configured Login Page
+[33m8551351[m HEAD@{3}: commit: Configured Login Page
+[33mf476aac[m HEAD@{4}: commit: Configured Login Page
+[33m9120a93[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{5}: reset: moving to HEAD~1
+[33m1998f7b[m HEAD@{6}: commit: Configured Login Page
+[33m9120a93[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{7}: commit: Corrected positioning of Contact Us Page
+[33m3edef76[m HEAD@{8}: commit: Removed the link part from Home Page
+[33md716ff9[m HEAD@{9}: pull: Fast-forward
+[33m4ddb084[m HEAD@{10}: commit: Configured positions of Elements in Sign Up Page
+[33m55c31f8[m HEAD@{11}: commit: Configured positions of elements on Login Page
+[33m5e3c8bb[m HEAD@{12}: commit: Added Socials section to Login route
+[33m9db0ae6[m HEAD@{13}: commit: Added Socials Footer Section to my Sign Up route
+[33ma9d7900[m HEAD@{14}: commit: Added Socials Footer to the Home Page
+[33me42af6a[m HEAD@{15}: commit: Updated the Links of Read More section
+[33mac0a577[m HEAD@{16}: commit: Added Read More and Action Buttons in end of Home Page
+[33mbfb7a24[m HEAD@{17}: commit: Completed the Testimonials Section
+[33m9033201[m HEAD@{18}: commit: Added Testimonials Section in Home Page
+[33m69d3d2c[m HEAD@{19}: commit: Added all new icons,animations and images in each card
+[33mf89e549[m HEAD@{20}: commit: Added animations to card and added lottie icons
+[33m1e77bff[m HEAD@{21}: pull: Fast-forward
+[33m15f9347[m HEAD@{22}: commit: Redesigned the card designs
+[33m4ae1ca1[m HEAD@{23}: commit: Added the ADHDapt features section
+[33mab619b1[m HEAD@{24}: pull: Fast-forward
+[33meb75ce9[m HEAD@{25}: commit: Downgraded project settings to React 18
+[33m4ff6212[m HEAD@{26}: commit: Completed the ADHD Stats portion
+[33mbf4be7e[m HEAD@{27}: commit: Configured the React Map to show ADHD data of each country
+[33mf958482[m HEAD@{28}: commit: Formed the dataset for ADHD data of each country
+[33m5c48b7f[m HEAD@{29}: commit: Added the React Simple Map to home page
+[33m9df79ab[m HEAD@{30}: pull: Fast-forward
+[33m3aa4dc3[m HEAD@{31}: commit: Added Socials' Links to Floating Dock Icons
+[33mfbf03b6[m HEAD@{32}: commit: Added Floating Dock to Footer in About Us Page
+[33mcbaea25[m HEAD@{33}: commit: Initialised FullScreen feature
+[33madcfddf[m HEAD@{34}: commit: Changed Font Color of Card Headings
+[33m16c976e[m HEAD@{35}: commit: Made the Canvas Portion
+[33ma33735f[m HEAD@{36}: commit: Added div to We Get You section
+[33mdd0d467[m HEAD@{37}: pull: Fast-forward
+[33me2570a4[m HEAD@{38}: commit: Added tagline
+[33mf366a93[m HEAD@{39}: pull: Fast-forward
+[33m79d63b1[m HEAD@{40}: commit (merge): Merge branch 'main' of https://github.com/satyansh911/adhdapt-v2
+[33m25b7791[m HEAD@{41}: commit: Video on About Us Page
+[33m7b92ac9[m HEAD@{42}: commit: Edited About Us Page
+[33m22c1134[m HEAD@{43}: commit: Added animations to Home Page
+[33m65a8c20[m HEAD@{44}: pull: Fast-forward
+[33m0e24a24[m HEAD@{45}: commit: Made changes to Start Your Journey button
+[33m902651a[m HEAD@{46}: commit: Redefined Home Page
+[33m6696a94[m HEAD@{47}: commit: Initialised Home Page and designed 404 page
+[33m9ea7f7c[m HEAD@{48}: pull: Fast-forward
+[33m338c4ae[m HEAD@{49}: pull: Fast-forward
+[33mc8c5785[m HEAD@{50}: Branch: renamed refs/heads/master to refs/heads/main
+[33mc8c5785[m HEAD@{52}: commit (initial): Initial Commit
